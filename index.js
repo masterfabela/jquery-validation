@@ -1,5 +1,5 @@
 $(document).ready(() => {
-    $('#initialForm').validate({
+    let validator = $('#initialForm').validate({
         rules: {
             name: {
                 required: true,
@@ -30,6 +30,7 @@ $(document).ready(() => {
         if ($('#initialForm').valid()) {
             console.log('yes');
         } else {
+            validator.focusInvalid();
             console.log('noo');
         }
     });
